@@ -10,7 +10,7 @@ const primeGanjilCheck = (angka) => {
 	if (find > 2 || find < 2) { result = true; }
 	return result;
 }
-const findPrimeGanjilList = () =>{
+const findNonPrimeGanjilList = () =>{
 	var hasil = '';
 	for(var x = 0;x<50;x++){
 		if(primeGanjilCheck(x)){
@@ -22,4 +22,4 @@ const findPrimeGanjilList = () =>{
 	hasil = hasil.substring(1);
 	return hasil;
 }
-console.log(findPrimeGanjilList())
+console.log(findNonPrimeGanjilList())

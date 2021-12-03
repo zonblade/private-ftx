@@ -9,13 +9,13 @@ FROM
 			IFNULL(SUM(mk.sks),0) AS count_mk
 		FROM
 			mhs_mata_kuliah mmk
-		LEFT OUTER JOIN(
-			SELECT
-				mata_kuliah.id AS mk_id,
-				mata_kuliah.sks AS sks
-			FROM
-				mata_kuliah
-		) mk ON mk.mk_id = mmk.mk_id
+			LEFT OUTER JOIN(
+				SELECT
+					mata_kuliah.id AS mk_id,
+					mata_kuliah.sks AS sks
+				FROM
+					mata_kuliah
+			) mk ON mk.mk_id = mmk.mk_id
 		WHERE
 			mmk.semester = 1
 		GROUP BY
